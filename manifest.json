@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Discord WatchTogether",
+  "description": "Overlay a video player over Discord to watch with friends",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+    // "default_icon": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.discord.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
